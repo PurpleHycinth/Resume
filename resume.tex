@@ -1,0 +1,166 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+% Suppress common microtype warning (harmless)
+\makeatletter
+\@ifundefined{MT@showhyphens@changed}{}{\let\MT@showhyphens@changed\relax}
+\makeatother
+
+% Page setup
+\geometry{left=0.7in, right=0.7in, top=0.65in, bottom=0.65in}
+
+% Hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfborder={0 0 0}
+}
+
+\pagestyle{empty}
+
+% Consistent section spacing
+\titleformat{\section}
+{\Large\bfseries\uppercase}
+{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}   % before / after section title
+
+% Robust subheading (wraps long text automatically)
+\newcommand{\resumeSubheading}[4]{
+    \vspace{4pt}
+    \begin{tabular*}{\textwidth}{@{} p{0.73\textwidth} @{\extracolsep{\fill}} r @{}}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}
+    \vspace{2pt}
+}
+
+\newcommand{\resumeProjectHeading}[1]{
+    \vspace{6pt}
+    \textbf{#1}\par
+    \vspace{2pt}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries SWARALI DESHMUKH}\\[6pt]
+    {\large Data Scientist | AI/ML Engineer}\\[8pt]
+    Maharashtra \quad $\bullet$ \quad
+    \href{mailto:swaralid42@gmail.com}{swaralid42@gmail.com} \quad $\bullet$ \quad
+    +91 8956497452 \\[4pt]
+    \href{https://github.com/PurpleHycinth}{GitHub} \quad $\bullet$ \quad
+    \href{https://www.linkedin.com/in/swarali-deshmukh-a54597218/}{LinkedIn}
+\end{center}
+\vspace{10pt}
+
+% Professional Summary
+\section{Professional Summary}
+AI/ML Engineer with 2+ years of applied experience building machine learning pipelines, NLP systems, and large-scale data processing workflows. Proven track record at WRI and ISRO delivering models that directly informed climate and energy policy decisions. Comfortable owning projects end-to-end — from raw 1TB+ datasets to deployed REST API inference systems. Seeking a high-impact Data Scientist / ML Engineer role at a product-first company.
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*, label={}, itemsep=2pt, parsep=1pt]
+    \item \textbf{Languages:} Python
+    \item \textbf{ML / Classical:} Scikit-learn, XGBoost, Random Forest, Kernel Ridge Regression, Hyperparameter Tuning
+    \item \textbf{Deep Learning:} PyTorch, TensorFlow, CNNs, Transformers, BERT, RAGs
+    \item \textbf{NLP \& GenAI:} RAG Pipelines, BERT Embeddings, Named Entity Recognition, Text Classification
+    \item \textbf{Data Engineering:} Pandas, NumPy, ETL Pipelines, Geospatial Data (GDAL)
+    \item \textbf{Infrastructure:} Docker, REST APIs, PostgreSQL, MongoDB, Git
+\end{itemize}
+
+% Work Experience
+\section{Work Experience}
+
+\resumeSubheading
+    {Junior Program Associate -- Climate, Economics \& Finance | World Resources Institute (WRI)}
+    {Remote}
+    {}
+    {Apr 2025 -- Jul 2025}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built econometric impact models in Python and R to evaluate distributional effects of carbon pricing policies across income quintiles using NSSO and HCES household survey data, adopted by WRI's India Climate Finance team.
+    \item Designed and deployed automated ETL pipelines that cut data cleaning time by $\sim$60\%, enabling analysts to run policy scenario comparisons 3$\times$ faster.
+    \item Led carbon emissions modelling for the Indian steel sector, producing findings referenced in 2 internal WRI policy briefs.
+    \item Produced interactive data visualizations and dashboards that translated econometric outputs into accessible insights for non-technical policy stakeholders.
+\end{itemize}
+
+\resumeSubheading
+    {Python Developer Intern | World Resources Institute (WRI)}
+    {Remote}
+    {}
+    {Jul 2024 -- Jan 2025}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Migrated the FTT energy model from Fortran to Python, reducing codebase complexity by $\sim$40\% and enabling parallel simulation runs.
+    \item Built memory-efficient data pipelines handling HCES datasets using chunked processing.
+    \item Refactored 5+ legacy modeling modules into well-documented, reusable Python components with unit tests.
+\end{itemize}
+
+\resumeSubheading
+    {Machine Learning Intern | Space Applications Centre (ISRO)}
+    {Ahmedabad}
+    {}
+    {Jan 2024 -- Apr 2024}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Processed and fused multispectral satellite imagery with tabular agricultural datasets to train crop yield prediction models (R$^2$ = 0.84).
+    \item Implemented Kernel Ridge Regression with GridSearchCV, improving forecast accuracy by $\sim$18\% over baseline.
+    \item Built scalable preprocessing pipelines integrating geospatial and tabular data (reduced time from 4h to <45min).
+\end{itemize}
+
+\resumeSubheading
+    {AI Intern | Anantadi Tech Pvt Ltd}
+    {Pune}
+    {}
+    {Jun 2023 -- Aug 2023}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built object detection pipelines using YOLOv8 and Detectron2 for context-aware ad placement in video frames.
+    \item Benchmarked object tracking algorithms (DLIB, Norfair, GOTURN) for spatial consistency across frames.
+    \item Worked in Agile sprints with twice-daily scrums and weekly presentations to leadership.
+\end{itemize}
+
+% Projects
+\section{Projects}
+
+\resumeProjectHeading{CareerWise-AI --- AI Recruitment Recommendation System}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built a BERT-based resume-to-JD matching engine with cosine similarity ranking (87\% top-3 match accuracy).
+    \item Developed a multi-class career path classifier using Word2Vec + XGBoost (79\% accuracy across 12 categories).
+    \item Deployed a REST API (FastAPI + Docker) with React frontend for skill gap visualization.
+\end{itemize}
+
+\resumeProjectHeading{Emotion Detection from Audio}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built a speech emotion classifier using MFCC, pitch, and spectral features from RAVDESS + TESS datasets (81\% accuracy).
+    \item Designed a modular inference pipeline with <200ms latency.
+\end{itemize}
+
+% Education
+\section{Education}
+
+\resumeSubheading
+    {M.Sc. Artificial Intelligence \& Machine Learning}
+    {Expected Aug 2027}
+    {Vellore Institute of Technology, Vellore}
+    {SGPA: 9.46 / 10}
+
+\resumeSubheading
+    {B.Sc. Data Science}
+    {2021 -- 2024}
+    {Christ (Deemed to be University), Pune}
+    {CGPA: 9.2 / 10}
+\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=1pt]
+    \item Extra-Curricular Excellence Merit Award (2 consecutive years)
+    \item Top 10 ranking — Data Analysis Project: Happiness Index via Twitter Data
+\end{itemize}
+
+\end{document}
