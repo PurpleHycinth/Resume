@@ -6,7 +6,7 @@
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage{microtype}
+\usepackage[expansion=false]{microtype}
 
 % Suppress common microtype warning (harmless)
 \makeatletter
@@ -67,17 +67,17 @@
 
 % Professional Summary
 \section{Professional Summary}
-AI/ML Engineer with 2+ years of applied experience building machine learning pipelines, NLP systems, and large-scale data processing workflows. Proven track record at WRI and ISRO delivering models that directly informed climate and energy policy decisions. Comfortable owning projects end-to-end — from raw 1TB+ datasets to deployed REST API inference systems. Seeking a high-impact Data Scientist / ML Engineer role at a product-first company.
+AI/ML Engineer with \textbf{2+ years} of applied experience across \textbf{econometric modelling}, \textbf{NLP systems}, \textbf{computer vision}, and \textbf{full-stack ML deployment}. Proven track record at \textbf{WRI} and \textbf{ISRO} delivering models that informed \textbf{climate and energy policy decisions} on \textbf{1TB+ datasets}. Built production-grade systems including a \textbf{LangGraph agentic pipeline} with \textbf{Gemini 2.5}, a \textbf{contrastive learning} fine-tuned \textbf{sentence transformer} (Pearson r +36\%), and \textbf{Dockerized full-stack NLP applications}. Comfortable owning projects end-to-end --- from \textbf{raw data pipelines} to \textbf{deployed REST APIs} and \textbf{React frontends}.
 
 % Technical Skills
 \section{Technical Skills}
 \begin{itemize}[leftmargin=*, label={}, itemsep=2pt, parsep=1pt]
-    \item \textbf{Languages:} Python
-    \item \textbf{ML / Classical:} Scikit-learn, XGBoost, Random Forest, Kernel Ridge Regression, Hyperparameter Tuning
-    \item \textbf{Deep Learning:} PyTorch, TensorFlow, CNNs, Transformers, BERT, RAGs
-    \item \textbf{NLP \& GenAI:} RAG Pipelines, BERT Embeddings, Named Entity Recognition, Text Classification
-    \item \textbf{Data Engineering:} Pandas, NumPy, ETL Pipelines, Geospatial Data (GDAL)
-    \item \textbf{Infrastructure:} Docker, REST APIs, PostgreSQL, MongoDB, Git
+    \item \textbf{Languages:} Python, R
+    \item \textbf{ML / Classical:} Scikit-learn, XGBoost, Random Forest, Kernel Ridge Regression, Word2Vec, Hyperparameter Tuning (GridSearchCV)
+    \item \textbf{Deep Learning:} PyTorch, TensorFlow, CNNs, Transformers, BERT, Sentence Transformers (all-MiniLM-L6-v2)
+    \item \textbf{NLP \& GenAI:} RAG Pipelines, LangGraph, BERT Embeddings, Named Entity Recognition, Text Classification, Contrastive Learning, LLM APIs (Gemini)
+    \item \textbf{Data Engineering:} Pandas, NumPy, ETL Pipelines, Chunked Processing, Geospatial Data (GDAL), Econometric Modelling
+    \item \textbf{Infrastructure \& Web:} FastAPI, React, Docker, Docker Compose, nginx, REST APIs, PostgreSQL, MongoDB, Git
 \end{itemize}
 
 % Work Experience
@@ -89,10 +89,10 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
     {}
     {Apr 2025 -- Jul 2025}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Built econometric impact models in Python and R to evaluate distributional effects of carbon pricing policies across income quintiles using NSSO and HCES household survey data, adopted by WRI's India Climate Finance team.
-    \item Designed and deployed automated ETL pipelines that cut data cleaning time by $\sim$60\%, enabling analysts to run policy scenario comparisons 3$\times$ faster.
-    \item Led carbon emissions modelling for the Indian steel sector, producing findings referenced in 2 internal WRI policy briefs.
-    \item Produced interactive data visualizations and dashboards that translated econometric outputs into accessible insights for non-technical policy stakeholders.
+    \item Built \textbf{econometric impact models} in \textbf{Python} and \textbf{R} to evaluate \textbf{distributional effects of carbon pricing policies} across income quintiles using \textbf{NSSO} and \textbf{HCES} household survey data, adopted by WRI's India Climate Finance team.
+    \item Designed and deployed \textbf{automated ETL pipelines} that cut \textbf{data cleaning time by $\sim$60\%}, enabling analysts to run policy scenario comparisons \textbf{3$\times$ faster}.
+    \item Led \textbf{carbon emissions modelling} for the Indian steel sector, producing findings referenced in \textbf{2 internal WRI policy briefs}.
+    \item Produced \textbf{interactive data visualizations} and \textbf{dashboards} that translated econometric outputs into accessible insights for non-technical policy stakeholders.
 \end{itemize}
 
 \resumeSubheading
@@ -101,9 +101,9 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
     {}
     {Jul 2024 -- Jan 2025}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Migrated the FTT energy model from Fortran to Python, reducing codebase complexity by $\sim$40\% and enabling parallel simulation runs.
-    \item Built memory-efficient data pipelines handling HCES datasets using chunked processing.
-    \item Refactored 5+ legacy modeling modules into well-documented, reusable Python components with unit tests.
+    \item Migrated the \textbf{FTT energy model} from \textbf{Fortran to Python}, reducing codebase complexity by $\sim$\textbf{40\%} and enabling \textbf{parallel simulation runs}.
+    \item Built \textbf{memory-efficient data pipelines} handling \textbf{HCES datasets} using \textbf{chunked processing}.
+    \item Refactored \textbf{5+ legacy modeling modules} into well-documented, reusable \textbf{Python components} with \textbf{unit tests}.
 \end{itemize}
 
 \resumeSubheading
@@ -112,9 +112,9 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
     {}
     {Jan 2024 -- Apr 2024}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Processed and fused multispectral satellite imagery with tabular agricultural datasets to train crop yield prediction models (R$^2$ = 0.84).
-    \item Implemented Kernel Ridge Regression with GridSearchCV, improving forecast accuracy by $\sim$18\% over baseline.
-    \item Built scalable preprocessing pipelines integrating geospatial and tabular data (reduced time from 4h to <45min).
+    \item Processed and fused \textbf{multispectral satellite imagery} with tabular agricultural datasets to train \textbf{crop yield prediction models} (\textbf{R$^2$ = 0.84}).
+    \item Implemented \textbf{Kernel Ridge Regression} with \textbf{GridSearchCV}, improving forecast accuracy by $\sim$\textbf{18\%} over baseline.
+    \item Built \textbf{scalable preprocessing pipelines} integrating \textbf{geospatial} and tabular data (reduced time from \textbf{4h to $<$45min}).
 \end{itemize}
 
 \resumeSubheading
@@ -123,9 +123,9 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
     {}
     {Jun 2023 -- Aug 2023}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Built object detection pipelines using YOLOv8 and Detectron2 for context-aware ad placement in video frames.
-    \item Benchmarked object tracking algorithms (DLIB, Norfair, GOTURN) for spatial consistency across frames.
-    \item Worked in Agile sprints with twice-daily scrums and weekly presentations to leadership.
+    \item Fine-tuned \textbf{all-MiniLM-L6-v2} on \textbf{2,000 JD--resume pairs} using \textbf{contrastive learning} and \textbf{cosine similarity loss}, achieving \textbf{Pearson r 0.723} (+36\%), perfect \textbf{NDCG@1/NDCG@3} (1.000), and \textbf{NDCG@5} of 0.923; implemented \textbf{sentence-level explainability} via \textbf{occlusion-based contribution scoring} for bias-aware, interpretable candidate ranking.
+    \item Built a \textbf{LangGraph} agentic pipeline with \textbf{Gemini 2.5 Flash LLM} across a \textbf{5-node stateful inference graph} for resume parsing, LLM-native domain detection, skill gap analysis, and real-time job recommendations via \textbf{Remotive} and \textbf{Arbeitnow REST APIs} --- replacing hardcoded keyword classifiers entirely.
+    \item Deployed a production \textbf{full-stack NLP application} (\textbf{FastAPI} + \textbf{React} + \textbf{Vite}) using \textbf{multi-stage Docker builds} served via \textbf{nginx reverse proxy}, with async resume ingestion, \textbf{UUID-based file lifecycle management}, \textbf{MongoDB} persistence, and \textbf{CORS}-aware environment-injected secrets via \textbf{Docker Compose}.
 \end{itemize}
 
 % Projects
@@ -133,15 +133,15 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
 
 \resumeProjectHeading{CareerWise-AI --- AI Recruitment Recommendation System}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Built a BERT-based resume-to-JD matching engine with cosine similarity ranking (87\% top-3 match accuracy).
-    \item Developed a multi-class career path classifier using Word2Vec + XGBoost (79\% accuracy across 12 categories).
-    \item Deployed a REST API (FastAPI + Docker) with React frontend for skill gap visualization.
+    \item Built a \textbf{BERT}-based \textbf{resume-to-JD matching engine} with \textbf{cosine similarity ranking} (\textbf{87\% top-3 match accuracy}).
+    \item Developed a \textbf{multi-class career path classifier} using \textbf{Word2Vec} + \textbf{XGBoost} (\textbf{79\% accuracy} across 12 categories).
+    \item Deployed a \textbf{REST API} (\textbf{FastAPI} + \textbf{Docker}) with \textbf{React} frontend for \textbf{skill gap visualization}.
 \end{itemize}
 
 \resumeProjectHeading{Emotion Detection from Audio}
 \begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
-    \item Built a speech emotion classifier using MFCC, pitch, and spectral features from RAVDESS + TESS datasets (81\% accuracy).
-    \item Designed a modular inference pipeline with <200ms latency.
+    \item Built a \textbf{speech emotion classifier} using \textbf{MFCC}, \textbf{pitch}, and \textbf{spectral features} from \textbf{RAVDESS} + \textbf{TESS} datasets (\textbf{81\% accuracy}).
+    \item Designed a \textbf{modular inference pipeline} with \textbf{$<$200ms latency}.
 \end{itemize}
 
 % Education
@@ -159,8 +159,8 @@ AI/ML Engineer with 2+ years of applied experience building machine learning pip
     {Christ (Deemed to be University), Pune}
     {CGPA: 9.2 / 10}
 \begin{itemize}[leftmargin=*, itemsep=2pt, parsep=1pt]
-    \item Extra-Curricular Excellence Merit Award (2 consecutive years)
-    \item Top 10 ranking — Data Analysis Project: Happiness Index via Twitter Data
+    \item \textbf{Extra-Curricular Excellence Merit Award} (2 consecutive years)
+    \item \textbf{Top 10 ranking} --- Data Analysis Project: Happiness Index via Twitter Data
 \end{itemize}
 
 \end{document}
