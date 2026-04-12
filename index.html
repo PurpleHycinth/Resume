@@ -3,76 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swarali's Resume</title>
+    <title>Swarali Deshmukh - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #fdfcfa;
+            --text: #1a1a1a;
+            --accent: #c44536;
+            --secondary: #2c5f7c;
+            --muted: #5a5a5a;
+            --border: #d4cfc7;
+            --light-bg: #f7f5f2;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #f8f9fa;
-            padding: 20px 10px;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            padding: 50px 40px;
+            animation: fadeIn 0.9s ease-out;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 35px;
+            margin-bottom: 45px;
+        }
+
         h1 {
-            text-align: center;
-            padding: 20px;
-            background: #1e3a8a;
-            color: white;
-            font-size: 1.8rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: var(--text);
+            text-transform: uppercase;
         }
-        .pdf-container {
-            width: 100%;
-            height: 100vh;
-            border: none;
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 18px;
         }
-        .download-btn {
-            display: block;
-            width: 200px;
-            margin: 15px auto;
-            padding: 12px 20px;
-            background: #1e3a8a;
-            color: white;
-            text-align: center;
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 15px;
+        }
+
+        .contact span {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact a {
+            color: var(--secondary);
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
-        .download-btn:hover {
-            background: #2e5bb8;
+
+        .contact a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
         }
+
+        .bullet {
+            margin: 0 8px;
+            color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 45px;
+            animation: slideUp 0.7s ease-out backwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.15s; }
+        section:nth-child(3) { animation-delay: 0.25s; }
+        section:nth-child(4) { animation-delay: 0.35s; }
+        section:nth-child(5) { animation-delay: 0.45s; }
+        section:nth-child(6) { animation-delay: 0.55s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .summary-text {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--text);
+            text-align: justify;
+        }
+
+        .summary-text strong {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .experience-item,
+        .education-item,
+        .project-item {
+            margin-bottom: 30px;
+            padding-left: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .location {
+            font-size: 0.95rem;
+            color: var(--muted);
+            font-style: italic;
+            text-align: right;
+        }
+
+        .subtitle-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .job-title,
+        .degree,
+        .department {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-style: italic;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+            text-align: right;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 8px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 7px;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 5px;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        li strong {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .skills-section {
+            background: var(--light-bg);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .skill-category {
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .skill-category strong {
+            color: var(--secondary);
+            font-weight: 700;
+            display: inline-block;
+            min-width: 180px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .awards {
+            margin-top: 8px;
+        }
+
         @media (max-width: 768px) {
-            .pdf-container {
-                height: 85vh;
+            .container {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .bullet {
+                display: none;
+            }
+
+            .item-header,
+            .subtitle-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .location,
+            .date {
+                text-align: left;
+            }
+
+            h3,
+            .job-title,
+            .degree,
+            .department {
+                min-width: 100%;
+            }
+
+            .skill-category strong {
+                display: block;
+                margin-bottom: 2px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            section {
+                animation: none;
+                page-break-inside: avoid;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .skills-section {
+                background: white;
+                border: 1px solid var(--border);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Resume</h1>
-        
-        <!-- This displays the PDF directly in the browser -->
-        <embed 
-            src="resume.pdf" 
-            type="application/pdf" 
-            class="pdf-container"
-            width="100%" 
-            height="100%">
-        
-        <!-- Optional: Download button (in case someone wants the file) -->
-        <a href="resume.tex" download="Swarali_Resume.pdf" class="download-btn">
-            Download PDF
-        </a>
+        <header>
+            <h1>Swarali Deshmukh</h1>
+            <div class="tagline">Data Scientist | AI/ML Engineer</div>
+            <div class="contact">
+                <span>Maharashtra</span>
+                <span class="bullet">•</span>
+                <a href="mailto:swaralid42@gmail.com">swaralid42@gmail.com</a>
+                <span class="bullet">•</span>
+                <span>+91 8956497452</span>
+            </div>
+            <div class="contact" style="margin-top: 8px;">
+                <a href="https://github.com/PurpleHycinth" target="_blank">GitHub</a>
+                <span class="bullet">•</span>
+                <a href="https://www.linkedin.com/in/swarali-deshmukh-a54597218/" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                AI/ML Engineer with <strong>1+ years</strong> of applied experience across <strong>econometric modelling</strong>, <strong>NLP systems</strong>, <strong>computer vision</strong>, and <strong>full-stack ML deployment</strong>. Proven track record at <strong>WRI</strong> and <strong>ISRO</strong> delivering models that informed <strong>climate and energy policy decisions</strong> on <strong>1TB+ datasets</strong>. Built production-grade systems including a <strong>LangGraph agentic pipeline</strong> with <strong>Gemini 2.5</strong>, a <strong>contrastive learning</strong> fine-tuned <strong>sentence transformer</strong> (Pearson r +36%), and <strong>Dockerized full-stack NLP applications</strong>. Comfortable owning projects end-to-end — from <strong>raw data pipelines</strong> to <strong>deployed REST APIs</strong> and <strong>React frontends</strong>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skill-category">
+                    <strong>Languages:</strong> Python, R
+                </div>
+                <div class="skill-category">
+                    <strong>ML / Classical:</strong> Scikit-learn, XGBoost, Random Forest, Kernel Ridge Regression, Word2Vec, Hyperparameter Tuning (GridSearchCV)
+                </div>
+                <div class="skill-category">
+                    <strong>Deep Learning:</strong> PyTorch, TensorFlow, CNNs, Transformers, BERT, Sentence Transformers (all-MiniLM-L6-v2), Retrieval Augmented Generation
+                </div>
+                <div class="skill-category">
+                    <strong>NLP & GenAI:</strong> RAG Pipelines, LangChain, LangGraph, BERT Embeddings, Named Entity Recognition, Text Classification, Contrastive Learning, LLM APIs (Gemini)
+                </div>
+                <div class="skill-category">
+                    <strong>Data Engineering:</strong> Pandas, NumPy, ETL Pipelines, Chunked Processing, Geospatial Data (GDAL), Econometric Modelling
+                </div>
+                <div class="skill-category">
+                    <strong>Infrastructure & Web:</strong> FastAPI, React, Docker, Docker Compose, REST APIs, PostgreSQL, MongoDB, Git
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>Junior Program Associate | World Resources Institute (WRI)</h3>
+                    <span class="location">Remote</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="department">Climate, Economics & Finance</span>
+                    <span class="date">Apr 2025 – Jul 2025</span>
+                </div>
+                <ul>
+                    <li>Built <strong>econometric impact models</strong> in <strong>Python</strong> and <strong>R</strong> to evaluate <strong>distributional effects of carbon pricing policies</strong> across income quintiles using <strong>NSSO</strong> and <strong>HCES</strong> household survey data, adopted by WRI's India Climate Finance team.</li>
+                    <li>Designed and deployed <strong>automated ETL pipelines</strong> that cut <strong>data cleaning time by ~60%</strong>, enabling analysts to run policy scenario comparisons <strong>3× faster</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>Python Developer Intern | World Resources Institute (WRI)</h3>
+                    <span class="location">Remote</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="department">Climate, Economics & Finance</span>
+                    <span class="date">Jul 2024 – Jan 2025</span>
+                </div>
+                <ul>
+                    <li>Migrated the <strong>FTT energy model</strong> from <strong>Fortran to Python</strong>, reducing codebase complexity by ~<strong>40%</strong> and enabling <strong>parallel simulation runs</strong>.</li>
+                    <li>Built <strong>memory-efficient data pipelines</strong> handling <strong>HCES datasets</strong> using <strong>chunked processing</strong>.</li>
+                    <li>Refactored <strong>5+ legacy modeling modules</strong> into well-documented, reusable <strong>Python components</strong> with <strong>unit tests</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>Machine Learning Intern | Space Applications Centre (ISRO)</h3>
+                    <span class="location">Ahmedabad</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="department">Remote Sensing & Geospatial AI</span>
+                    <span class="date">Jan 2024 – Apr 2024</span>
+                </div>
+                <ul>
+                    <li>Processed and fused <strong>multispectral satellite imagery</strong> with tabular agricultural datasets to train <strong>crop yield prediction models</strong> (<strong>R² = 0.84</strong>).</li>
+                    <li>Implemented <strong>Kernel Ridge Regression</strong> with <strong>GridSearchCV</strong>, improving forecast accuracy by ~<strong>18%</strong> over baseline.</li>
+                    <li>Built <strong>scalable preprocessing pipelines</strong> integrating <strong>geospatial</strong> and tabular data (reduced time from <strong>4h to <45min</strong>).</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>AI Intern | Anantadi Tech Pvt Ltd</h3>
+                    <span class="location">Pune</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="department">Computer Vision & Ad-Tech</span>
+                    <span class="date">Jun 2023 – Aug 2023</span>
+                </div>
+                <ul>
+                    <li>Built and evaluated object detection pipelines using <strong>YOLOv8</strong> and <strong>Detectron2</strong> for identifying context-aware ad placement regions (walls, flat surfaces, banners) in movie and TV video frames.</li>
+                    <li>Benchmarked object tracking algorithms (<strong>DLIB</strong>, <strong>Norfair</strong>, <strong>GOTURN</strong>) for maintaining spatial consistency of ad placement regions across video frames.</li>
+                    <li>Operated in an <strong>Agile</strong> sprint framework with twice-daily scrums, presenting weekly progress updates and technical findings to company leadership and faculty advisors.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">CareerWise-AI — AI Recruitment Recommendation System</div>
+                <ul>
+                    <li>Built a full-stack AI-powered resume ranking system using <strong>FastAPI</strong>, <strong>React (Vite)</strong>, and a fine-tuned <strong>Sentence-BERT (MiniLM-L6-v2)</strong> model to compute <strong>semantic similarity</strong> scores between resumes and job descriptions, containerized with <strong>Docker</strong> and <strong>nginx</strong> reverse proxy.</li>
+                    <li>Developed an <strong>LLM-driven</strong> career path advisor leveraging <strong>LangGraph</strong>, <strong>Google Gemini API</strong>, and <strong>LangChain</strong> to parse resumes (<strong>PDF/DOCX</strong>), detect <strong>skill gaps</strong>, and generate personalized course, job role, and university recommendations with real-time job listings via the <strong>Adzuna API</strong>.</li>
+                    <li>Designed and deployed a <strong>REST API</strong> with <strong>FastAPI/Uvicorn</strong> featuring explainability outputs (<strong>sentence-level scoring</strong>, <strong>occlusion analysis</strong>, <strong>keyword gap detection</strong>), <strong>MongoDB</strong> persistence, automated file lifecycle management, and <strong>CORS</strong>-secured multi-origin support for production environments.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Emotion Detection from Audio</div>
+                <ul>
+                    <li>Built a <strong>speech emotion classifier</strong> using <strong>MFCC</strong>, <strong>pitch</strong>, and <strong>spectral features</strong> from <strong>RAVDESS</strong> + <strong>TESS</strong> datasets (<strong>81% accuracy</strong>).</li>
+                    <li>Designed a <strong>modular inference pipeline</strong> with <strong><200ms latency</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <h3>M.Sc. Artificial Intelligence & Machine Learning</h3>
+                    <span class="location">SGPA: 9.46 / 10</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="degree">Vellore Institute of Technology, Vellore</span>
+                    <span class="date">Jul 2025 – Expected Aug 2027</span>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <h3>B.Sc. Data Science</h3>
+                    <span class="location">CGPA: 9.2 / 10</span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="degree">Christ (Deemed to be University), Pune</span>
+                    <span class="date">2021 – 2024</span>
+                </div>
+                <ul class="awards">
+                    <li><strong>Extra-Curricular Excellence Merit Award</strong> (2 consecutive years)</li>
+                    <li><strong>Top 10 ranking</strong> — Data Analysis Project: Happiness Index via Twitter Data</li>
+                </ul>
+            </div>
+        </section>
     </div>
 </body>
 </html>
