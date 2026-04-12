@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[expansion=false]{microtype}
+
+\makeatletter
+\@ifundefined{MT@showhyphens@changed}{}{\let\MT@showhyphens@changed\relax}
+\makeatother
+
+\geometry{left=0.7in, right=0.7in, top=0.65in, bottom=0.65in}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfborder={0 0 0}
+}
+
+\pagestyle{empty}
+
+\titleformat{\section}
+{\Large\bfseries\uppercase}
+{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Fixed: now has 3 rows — role | date, org | location, optional subtitle
+\newcommand{\resumeSubheading}[4]{
+    \vspace{4pt}
+    \begin{tabular*}{\textwidth}{@{} p{0.73\textwidth} @{\extracolsep{\fill}} r @{}}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}
+    \vspace{2pt}
+}
+
+% Fixed: version with no subtitle row (avoids blank italic line)
+\newcommand{\resumeSubheadingTwo}[4]{
+    \vspace{4pt}
+    \begin{tabular*}{\textwidth}{@{} p{0.73\textwidth} @{\extracolsep{\fill}} r @{}}
+        \textbf{#1} \textit{| #3} & \textit{#4} \\
+        #2 & \\
+    \end{tabular*}
+    \vspace{2pt}
+}
+
+\newcommand{\resumeProjectHeading}[1]{
+    \vspace{6pt}
+    \textbf{#1}\par
+    \vspace{2pt}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries SWARALI DESHMUKH}\\[6pt]
+    {\large Data Scientist | AI/ML Engineer}\\[8pt]
+    Maharashtra \quad $\bullet$ \quad
+    \href{mailto:swaralid42@gmail.com}{swaralid42@gmail.com} \quad $\bullet$ \quad
+    +91 8956497452 \\[4pt]
+    \href{https://github.com/PurpleHycinth}{GitHub} \quad $\bullet$ \quad
+    \href{https://www.linkedin.com/in/swarali-deshmukh-a54597218/}{LinkedIn}
+\end{center}
+\vspace{10pt}
+
+% Professional Summary
+\section{Professional Summary}
+AI/ML Engineer with \textbf{1+ years} of applied experience across \textbf{econometric modelling}, \textbf{NLP systems}, \textbf{computer vision}, and \textbf{full-stack ML deployment}. Proven track record at \textbf{WRI} and \textbf{ISRO} delivering models that informed \textbf{climate and energy policy decisions} on \textbf{1TB+ datasets}. Built production-grade systems including a \textbf{LangGraph agentic pipeline} with \textbf{Gemini 2.5}, a \textbf{contrastive learning} fine-tuned \textbf{sentence transformer} (Pearson r +36\%), and \textbf{Dockerized full-stack NLP applications}. Comfortable owning projects end-to-end --- from \textbf{raw data pipelines} to \textbf{deployed REST APIs} and \textbf{React frontends}.
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*, label={}, itemsep=2pt, parsep=1pt]
+    \item \textbf{Languages:} Python, R
+    \item \textbf{ML / Classical:} Scikit-learn, XGBoost, Random Forest, Kernel Ridge Regression, Word2Vec, Hyperparameter Tuning (GridSearchCV)
+    \item \textbf{Deep Learning:} PyTorch, TensorFlow, CNNs, Transformers, BERT, Sentence Transformers (all-MiniLM-L6-v2), Retrieval Augmented Generation
+    \item \textbf{NLP \& GenAI:} RAG Pipelines, LangChain, LangGraph, BERT Embeddings, Named Entity Recognition, Text Classification, Contrastive Learning, LLM APIs (Gemini)
+    \item \textbf{Data Engineering:} Pandas, NumPy, ETL Pipelines, Chunked Processing, Geospatial Data (GDAL), Econometric Modelling
+    \item \textbf{Infrastructure \& Web:} FastAPI, React, Docker, Docker Compose, REST APIs, PostgreSQL, MongoDB, Git
+\end{itemize}
+
+% Work Experience
+\section{Work Experience}
+
+\resumeSubheading
+    {Junior Program Associate | World Resources Institute (WRI)}
+    {Remote}
+    {Climate, Economics \& Finance}
+    {Apr 2025 -- Jul 2025}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built \textbf{econometric impact models} in \textbf{Python} and \textbf{R} to evaluate \textbf{distributional effects of carbon pricing policies} across income quintiles using \textbf{NSSO} and \textbf{HCES} household survey data, adopted by WRI's India Climate Finance team.
+    \item Designed and deployed \textbf{automated ETL pipelines} that cut \textbf{data cleaning time by $\sim$60\%}, enabling analysts to run policy scenario comparisons \textbf{3$\times$ faster}.
+\end{itemize}
+
+\resumeSubheading
+    {Python Developer Intern | World Resources Institute (WRI)}
+    {Remote}
+    {Climate, Economics \& Finance}
+    {Jul 2024 -- Jan 2025}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Migrated the \textbf{FTT energy model} from \textbf{Fortran to Python}, reducing codebase complexity by $\sim$\textbf{40\%} and enabling \textbf{parallel simulation runs}.
+    \item Built \textbf{memory-efficient data pipelines} handling \textbf{HCES datasets} using \textbf{chunked processing}.
+    \item Refactored \textbf{5+ legacy modeling modules} into well-documented, reusable \textbf{Python components} with \textbf{unit tests}.
+\end{itemize}
+
+\resumeSubheading
+    {Machine Learning Intern | Space Applications Centre (ISRO)}
+    {Ahmedabad}
+    {Remote Sensing \& Geospatial AI}
+    {Jan 2024 -- Apr 2024}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Processed and fused \textbf{multispectral satellite imagery} with tabular agricultural datasets to train \textbf{crop yield prediction models} (\textbf{R$^2$ = 0.84}).
+    \item Implemented \textbf{Kernel Ridge Regression} with \textbf{GridSearchCV}, improving forecast accuracy by $\sim$\textbf{18\%} over baseline.
+    \item Built \textbf{scalable preprocessing pipelines} integrating \textbf{geospatial} and tabular data (reduced time from \textbf{4h to $<$45min}).
+\end{itemize}
+
+\resumeSubheading
+    {AI Intern | Anantadi Tech Pvt Ltd}
+    {Pune}
+    {Computer Vision \& Ad-Tech}
+    {Jun 2023 -- Aug 2023}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built and evaluated object detection pipelines using \textbf{YOLOv8} and \textbf{Detectron2} for identifying context-aware ad placement regions (walls, flat surfaces, banners) in movie and TV video frames.
+    \item Benchmarked object tracking algorithms (\textbf{DLIB}, \textbf{Norfair}, \textbf{GOTURN}) for maintaining spatial consistency of ad placement regions across video frames.
+    \item Operated in an \textbf{Agile} sprint framework with twice-daily scrums, presenting weekly progress updates and technical findings to company leadership and faculty advisors.
+\end{itemize}
+
+% Projects
+\section{Projects}
+
+\resumeProjectHeading{CareerWise-AI --- AI Recruitment Recommendation System}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built a full-stack AI-powered resume ranking system using \textbf{FastAPI}, \textbf{React (Vite)}, and a fine-tuned \textbf{Sentence-BERT (MiniLM-L6-v2)} model to compute \textbf{semantic similarity} scores between resumes and job descriptions, containerized with \textbf{Docker} and \textbf{nginx} reverse proxy.
+    \item Developed an \textbf{LLM-driven} career path advisor leveraging \textbf{LangGraph}, \textbf{Google Gemini API}, and \textbf{LangChain} to parse resumes (\textbf{PDF/DOCX}), detect \textbf{skill gaps}, and generate personalized course, job role, and university recommendations with real-time job listings via the \textbf{Adzuna API}.
+    \item Designed and deployed a \textbf{REST API} with \textbf{FastAPI/Uvicorn} featuring explainability outputs (\textbf{sentence-level scoring}, \textbf{occlusion analysis}, \textbf{keyword gap detection}), \textbf{MongoDB} persistence, automated file lifecycle management, and \textbf{CORS}-secured multi-origin support for production environments.
+\end{itemize}
+
+\resumeProjectHeading{Emotion Detection from Audio}
+\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=1pt]
+    \item Built a \textbf{speech emotion classifier} using \textbf{MFCC}, \textbf{pitch}, and \textbf{spectral features} from \textbf{RAVDESS} + \textbf{TESS} datasets (\textbf{81\% accuracy}).
+    \item Designed a \textbf{modular inference pipeline} with \textbf{$<$200ms latency}.
+\end{itemize}
+
+% Education
+\section{Education}
+
+\resumeSubheading
+    {M.Sc. Artificial Intelligence \& Machine Learning}
+    {Jul 2025 -- Expected Aug 2027}
+    {Vellore Institute of Technology, Vellore}
+    {SGPA: 9.46 / 10}
+
+\resumeSubheading
+    {B.Sc. Data Science}
+    {2021 -- 2024}
+    {Christ (Deemed to be University), Pune}
+    {CGPA: 9.2 / 10}
+\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=1pt]
+    \item \textbf{Extra-Curricular Excellence Merit Award} (2 consecutive years)
+    \item \textbf{Top 10 ranking} --- Data Analysis Project: Happiness Index via Twitter Data
+\end{itemize}
+
+\end{document}
